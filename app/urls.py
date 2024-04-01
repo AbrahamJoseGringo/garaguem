@@ -12,12 +12,16 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from core.views import UserViewSet
 from core.views import AcessorioViewSet
 from core.views import CategoriaViewSet
+from core.views import CorViewSet
+from core.views import MarcaViewSet
 
 router = DefaultRouter()
 
 router.register(r"users", UserViewSet, basename="users")
 router.register(r"acessorio", AcessorioViewSet)
 router.register(r"categoria", CategoriaViewSet)
+router.register(r"cor", CorViewSet)
+router.register(r"marca", MarcaViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     # OpenAPI 3
